@@ -4,6 +4,10 @@ html,body {
 
 /* cor de texto fofa rosa vermleho #d63384; */
 
+.text-pinkish {
+  color: #d63384;
+}
+
 body {
   margin: 0;
     

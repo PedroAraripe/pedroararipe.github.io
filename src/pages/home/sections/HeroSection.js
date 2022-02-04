@@ -31,7 +31,7 @@ function HeroSection() {
                         <h1>hi, <span> lucas </span> here.</h1>
                         <h2 className="text-pinkish">I create stuff sometimes.</h2>
                     </div>
-                    <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me to express my creativity.</HeroTextContainer>
+                    <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                 </section>
                 <div className="pb-3 pb-md-5">
                     <button className="border border-danger btn px-5 py-3 text-danger">Say hello</button>
