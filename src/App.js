@@ -4,8 +4,8 @@ import HeroSection from './pages/home/sections/HeroSection';
 import styled from 'styled-components'
 
 const WrapperContainerX = styled.div`
-  padding: 0 5%;
-  
+  padding: 0 20px;
+
   @media (min-width: 768px){
     padding: 0 15%;
   }

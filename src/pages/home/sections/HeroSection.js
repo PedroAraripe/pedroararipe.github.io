@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 const TopMargin = styled.div`
     height: 100vh;
-    padding-top:5%;
+    padding-top: 20px;
     
     @media (min-width: 768px){
         padding-top:10%;
