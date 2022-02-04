@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import HeroSection from './pages/home/sections/HeroSection';
+
+import styled from 'styled-components'
+
+const WrapperContainerX = styled.div`
+  padding: 0 5%;
+  
+  @media (min-width: 768px){
+    padding: 0 15%;
+  }
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WrapperContainerX className="App">
+        <HeroSection />
+    </WrapperContainerX>
   );
 }
 
