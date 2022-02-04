@@ -1,7 +1,8 @@
 import React from 'react';
-import HeroSection from './pages/home/sections/HeroSection';
 
 import styled from 'styled-components'
+
+import Home from './pages/home/index.js'
 
 const WrapperContainerX = styled.div`
   padding: 0 20px;
@@ -14,7 +15,7 @@ const WrapperContainerX = styled.div`
 function App() {
   return (
     <WrapperContainerX className="App">
-        <HeroSection />
+     <Home />
     </WrapperContainerX>
   );
 }
