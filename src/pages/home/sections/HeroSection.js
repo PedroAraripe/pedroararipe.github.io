@@ -11,6 +11,10 @@ const TopMargin = styled.div`
     }
 `
 
+const HeroTextContainer = styled.p`
+    max-width: 500px;
+`
+
 function HeroSection() {
     return (
         <TopMargin>
@@ -25,9 +29,9 @@ function HeroSection() {
                     </div>
                     <div>
                         <h1>hi, <span> lucas </span> here.</h1>
-                        <h2 className="text-muted">I create stuff sometimes.</h2>
+                        <h2 className="text-pinkish">I create stuff sometimes.</h2>
                     </div>
-                    <div className="py-4">I'm a software engineer and artist based in Toronto. I have profound interest in full-stack development, machine learning, human-computer interactions, and everything in between.</div>
+                    <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil. Everything related to software development that can provides me more ways to represents my creativity and logic, amazes me and warms my heart.</HeroTextContainer>
                 </section>
                 <div className="pb-3 pb-md-5">
                     <button className="border border-danger btn px-5 py-3 text-danger">Say hello</button>
