@@ -25,39 +25,41 @@ const TechList = styled.ul`
 
 function HeroSection() {
     return (
-            <section className='mt-5'>
-                <TitleSection className='mb-4'>about</TitleSection>
-                <main className='row'>
-                    <div className="col-md-8">
-                        <p>
-                            I am currently studying Computer Science at University of Toronto , with a focus in Software Systems and Artificial Intelligence. Last year, I was on a one year internship at Wattpad as a Software Engineer.
-                        </p>
-                        <p>
-                            I'm into any sort of software development that requires creativity. My other areas of interest include machine learning, human-computer interactions and frontend development. I also like my fair share of visual arts and video editing. In my free time, I eat guava fruit and play video games.
-                        </p>
-                        <div>
-                            Here are some technologies I have been working with:
-                        </div>
+            <section className='mt-5 row'>
+                <div className="col-12 ">
+                    <TitleSection className='mb-4'>about</TitleSection>
+                </div>
+                <main className="col-md-8">
+                    <p>
+                        I am currently studying <strong>Analysis and System Development</strong> at <strong>Estácio de Sá</strong>
+                        , with a focus in <strong>Web Development</strong>. In the same month that i started my college degree
+                        , i'd the lucky to get an internship and get <strong>experience with Javascript</strong> early.
+                    </p>
+                    <p>
+                        The Front-End development is where i feel 100% comfortable
+                        , but i'm really into any way of development that i can use my <strong>creativity</strong> and <strong>problem solving skills</strong>. 
+                    </p>
+                    <span>
+                        Here are some technologies I have been working with:
+                    </span>
 
-                        <TechList>
-                            <li>Vue</li>
-                            <li>Nuxt</li>
-                            <li>Javascript</li>
-                            <li>React</li>
-                            <li>Next</li>
-                            <li>Node</li>
-                            <li>Bootstrap</li>
-                            <li>TailwindCss</li>
-                            <li>Sass</li>
-                            <li>PostCss</li>
-                        </TechList>
-                    </div>
-                    <div className="offset-1 col-md-3">
-                        {/* TODO */}
-                        Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado 
-                    </div>
-                    
+                    <TechList>
+                        <li>Vue.js</li>
+                        <li>Nuxt</li>
+                        <li>Javascript</li>
+                        <li>React.js</li>
+                        <li>Next</li>
+                        <li>Node.js</li>
+                        <li>Bootstrap</li>
+                        <li>TailwindCss</li>
+                        <li>Sass</li>
+                        <li>PostCss</li>
+                    </TechList>
                 </main>
+                <aside className="offset-1 col-md-3">
+                    {/* TODO */}
+                    Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado 
+                </aside>
             </section>
     );
   }

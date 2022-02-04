@@ -31,10 +31,13 @@ function HeroSection() {
                 </div>
                 <main className="col-md-8">
                     <p>
-                        I am currently studying Analysis and System Development at Estácio de Sá, with a focus in Web Development. In the same month that i started my college degree, i'd the lucky to get an internship to work with Vue.js.
+                        I am currently studying <strong>Analysis and System Development</strong> at <strong>Estácio de Sá</strong>
+                        , with a focus in <strong>Web Development</strong>. In the same month that i started my college degree
+                        , i'd the lucky to get an internship and get <strong>experience with Javascript</strong> early.
                     </p>
                     <p>
-                        The Front-End development is where i feel 100% comfortable, but i'm really into any way of the development that i can use my creativity and problem solving skills. 
+                        The Front-End development is where i feel 100% comfortable
+                        , but i'm really into any way of development that i can use my <strong>creativity</strong> and <strong>problem solving skills</strong>. 
                     </p>
                     <span>
                         Here are some technologies I have been working with:
