@@ -1,0 +1,31 @@
+:root {
+    --tomato : #cc3333;
+}
+
+.text-tomato {
+    color: var(--tomato);
+}
+
+.text-tomato-dark {
+    color: hsl(0, 60%, 30%);
+}
+
+.bg-tomato {
+    background-color: var(--tomato);
+}
+
+.border-tomato {
+    border-color: var(--tomato) !important;
+}
+
+.btn-tomato {
+    color: var(--tomato);
+    border: 1px solid var(--tomato);
+    font-weight: bold;
+}
+
+.btn-tomato:hover {
+    transition: all 0.4s;
+    color: black;
+    background-color: var(--tomato);
+}

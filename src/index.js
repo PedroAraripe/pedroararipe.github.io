@@ -5,7 +5,7 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
-import './global.css';
+import './styles/global.css';
 
 
 
