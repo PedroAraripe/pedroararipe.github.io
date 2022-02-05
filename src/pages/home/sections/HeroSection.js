@@ -4,10 +4,10 @@ import Dude from '../../../common/components/Dude';
 
 function HeroSection() {
     return (
-        <TopMargin>
-            <div className="h-100 d-flex d-md-block flex-column align-items-center align-items-md-between">
-                <section className="d-flex flex-column align-items-center d-md-block text-center text-md-start flex-grow-1">
-                    <div className="pb-3 pb-md-4">
+        <Wrapper>
+            <div className="h-100 d-flex flex-column align-items-center align-items-md-start justify-content-center">
+                <section className="d-flex flex-column align-items-center d-md-block text-center text-md-start">
+                    <div className="pb-4">
                     {/* TODO */}
                     {/* Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado  */}
                     {/* De tempos em tempos é adicionado um novo bonequinho que vem deslizando 
@@ -20,7 +20,7 @@ function HeroSection() {
                     </div>
                     <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                 </section>
-                <div className="pb-3 pb-md-5">
+                <div>
                     <a
                         href="mailto:pedro.lucx@gmail.com"
                         className="btn btn-tomato text-tomato px-5 py-3">
@@ -28,17 +28,12 @@ function HeroSection() {
                     </a>
                 </div>
             </div>
-        </TopMargin>
+        </Wrapper>
     );
 }
 
-const TopMargin = styled.div`
+const Wrapper = styled.div`
     height: 100vh;
-    padding-top: 20px;
-    
-    @media (min-width: 768px){
-        padding-top:10%;
-    }
 `
 
 const MainTitle = styled.h1`
