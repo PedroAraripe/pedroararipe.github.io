@@ -1,0 +1,23 @@
+.dude-eyes{
+    transition: all 0.3s;
+}
+
+.dude-look-left .dude-eyes {
+    position: relative;
+    left: -10px !important;
+}
+
+.dude-look-right .dude-eyes {
+    position: relative;
+    left: 10px !important;
+}
+
+.dude-look-up .dude-eyes {
+    position: relative;
+    top: -5px !important;
+}
+
+.dude-look-down .dude-eyes {
+    position: relative;
+    top: 5px !important;
+}

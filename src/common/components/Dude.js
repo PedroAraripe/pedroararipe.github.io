@@ -1,9 +1,13 @@
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import DudeOnScreen from '../utils/DudeOnScreen';
 
 export default function Dude(){
+    DudeOnScreen();
+
     return (
-        <DudeBody>
-            <EyesPositionY>
+        <DudeBody className='dude'>
+            <EyesPositionY className='dude-eyes'>
                 <LeftEye />
                 <RightEye />
             </EyesPositionY>
@@ -32,7 +36,8 @@ const DudeBody = styled.div`
 const EyesPositionY = styled.div`
     display: flex;
     justify-content: space-around;
-    
+    position: relative;
+
     width: 100%;
 `
 
