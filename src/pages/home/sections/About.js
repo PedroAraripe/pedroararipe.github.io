@@ -2,6 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components'
 import { TitleSection } from '../styles'; 
+import Dude from '../../../common/components/Dude'
 
 const TechList = styled.ul`
     list-style: none;
@@ -23,7 +24,7 @@ const TechList = styled.ul`
     }
 `
 
-function HeroSection() {
+function AboutSection() {
     return (
             <section className='mt-5 row'>
                 <div className="col-12 ">
@@ -33,7 +34,7 @@ function HeroSection() {
                     <p>
                         I am currently studying <strong>Analysis and System Development</strong> at <strong>Estácio de Sá</strong>
                         , with a focus in <strong>Web Development</strong>. In the same month that i started my college degree
-                        , i'd the lucky to get an internship and get <strong>experience with Javascript</strong> early.
+                        , i'd the lucky to get an internship and get experience with <strong>Javascript</strong> early.
                     </p>
                     <p>
                         The Front-End development is where i feel 100% comfortable
@@ -56,13 +57,12 @@ function HeroSection() {
                         <li>PostCss</li>
                     </TechList>
                 </main>
-                <aside className="offset-1 col-md-3">
-                    {/* TODO */}
-                    Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado 
+                <aside className="offset-md-1 col-md-3 d-flex justify-content-center justify-content-md-end align-items-md-end">
+                    <Dude dudeColor="hsl(144deg 60% 50%)" />
                 </aside>
             </section>
     );
   }
   
-  export default HeroSection;
+  export default AboutSection;
   

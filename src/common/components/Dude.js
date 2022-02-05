@@ -3,22 +3,22 @@ import styled from 'styled-components';
 import DudeOnScreen from '../utils/DudeOnScreen';
 import RandomFaces from '../utils/RandomFaces';
 
-export default function Dude(){
-    DudeOnScreen();
-    RandomFaces()
-
-    return (
-        <DudeBody className='dude'>
-            <EyesPositionY className='eyes'>
-                <LeftEye />
-                <RightEye />
-            </EyesPositionY>
-            <Mouth className='mouth'>
-                <AboveTeeth className='teeth-up' />
-                <UnderTeeth className='teeth-down' />
-            </Mouth>
-        </DudeBody>
-    )
+export default function Dude (props){
+        DudeOnScreen();
+        RandomFaces()
+        
+        return (
+            <DudeBody dudeColor={props.dudeColor} className='dude'>
+                <EyesPositionY className='eyes'>
+                    <LeftEye />
+                    <RightEye />
+                </EyesPositionY>
+                <Mouth className='mouth'>
+                    <AboveTeeth className='teeth-up' />
+                    <UnderTeeth className='teeth-down' />
+                </Mouth>
+            </DudeBody>
+        )
 }
 
 const DudeBody = styled.div`
@@ -27,7 +27,7 @@ const DudeBody = styled.div`
     flex-direction: column;
     justify-content: center;
     
-    background-color: #cc3333;
+    background-color: ${props => ( props.dudeColor ?? '#cc3333')};;
 
     width: 150px;
     height: 150px;
