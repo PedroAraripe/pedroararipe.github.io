@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 
-function StaringEyes(){
+export default function StaringEyes(){
+
     useEffect(() => {
         const dudes = document.querySelectorAll('.dude');
 
@@ -10,7 +11,8 @@ function StaringEyes(){
                 if(element.isIntersecting){
                     addMouseMovement();
                 } else {
-                    removeMouseMovement()
+                    removeMouseMovement();
+                    removeClassDirections(dude);
                 }
             })
 
@@ -25,7 +27,6 @@ function addMouseMovement(){
 
 function getUserMouseMovement(e){
     const dudes = document.querySelectorAll('.dude');
-    const dudeEyes = document.querySelectorAll('.dude');
     
     dudes.forEach(dude => {
         let directionX = dude.getBoundingClientRect().x - e.clientX; 
@@ -33,27 +34,39 @@ function getUserMouseMovement(e){
         
         let positiveX = !!( directionX > 0)
         let positiveY = !!( directionY > 0)
- 
-        let distantX = !!( Math.abs(directionX) > 200)
-        let distantY = !!( Math.abs(directionY) > 200)
- 
-        if( positiveX ) {
+
+        // TODO 
+        // precisa pegar o valor do tamanho do bixim verificar se o mouse ta dentro dele,
+        // caso esteja, ele n vai olhar pros lados
+
+        if( positiveX && directionX !== 0 ) {
             dudeLookLeft(dude);
-        } 
-        
-        if( !positiveX ) {
+        } else if( !positiveX && directionX !== 0 ){
             dudeLookRight(dude);
         }
         
-        if( positiveY ) {
+        if( positiveY && directionY !== 0 ) {
             dudeLookUp(dude);
-        } 
-        
-        if( !positiveY ) {
+        } else if( !positiveY && directionY !== 0 ){
             dudeLookDown(dude);
         }
+
+
     })
     return e;
+}
+
+function removeClassDirections(dude){
+    const lookingDirectionClasses = [
+        'dude-look-left',
+        'dude-look-right',
+        'dude-look-up',
+        'dude-look-down',
+    ]
+
+    lookingDirectionClasses.forEach( c => {
+        dude.classList.remove( c )
+    })
 }
 
 function removeMouseMovement(){
@@ -79,5 +92,3 @@ function dudeLookUp(dude){
     dude.classList.add('dude-look-up')
     dude.classList.remove('dude-look-down')
 }
-
-export default StaringEyes;

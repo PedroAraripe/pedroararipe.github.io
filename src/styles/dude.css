@@ -1,23 +1,74 @@
-.dude-eyes{
+.eyes{
+    position: relative;
     transition: all 0.3s;
 }
 
-.dude-look-left .dude-eyes {
+.dude{
     position: relative;
+    transition: all 0.3s;
+}
+
+.mouth {
+    transition: all 0.5s;
+}
+
+.dude-look-left {
     left: -10px !important;
 }
 
-.dude-look-right .dude-eyes {
-    position: relative;
+.dude-look-left .eyes {
+    left: -10px !important;
+}
+
+.dude-look-right {
     left: 10px !important;
 }
 
-.dude-look-up .dude-eyes {
-    position: relative;
+.dude-look-right .eyes {
+    left: 10px !important;
+}
+
+.dude-look-up {
     top: -5px !important;
 }
 
-.dude-look-down .dude-eyes {
-    position: relative;
+.dude-look-up .eyes {
+    top: -5px !important;
+}
+
+.dude-look-down {
     top: 5px !important;
+}
+
+.dude-look-down .eyes {
+    top: 5px !important;
+}
+
+.little-smile .mouth {
+    max-height: 10px;
+    max-width: 10px;
+}
+
+.little-smile .teeth-up {
+    display: none;
+}
+
+.little-smile .teeth-down {
+    display: none;
+}
+
+.straight-face .mouth {
+    max-height: 10px;
+    max-width: 60px;;
+    
+    margin-top: 25%;
+    border-radius: none;
+}
+
+.straight-face .teeth-up {
+    display: none;
+}
+
+.straight-face .teeth-down {
+    display: none;
 }

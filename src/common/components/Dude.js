@@ -1,19 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import DudeOnScreen from '../utils/DudeOnScreen';
+import RandomFaces from '../utils/RandomFaces';
 
 export default function Dude(){
     DudeOnScreen();
+    RandomFaces()
 
     return (
         <DudeBody className='dude'>
-            <EyesPositionY className='dude-eyes'>
+            <EyesPositionY className='eyes'>
                 <LeftEye />
                 <RightEye />
             </EyesPositionY>
-            <Mouth>
-                <AboveTeeth />
-                <UnderTeeth />
+            <Mouth className='mouth'>
+                <AboveTeeth className='teeth-up' />
+                <UnderTeeth className='teeth-down' />
             </Mouth>
         </DudeBody>
     )
@@ -60,6 +62,10 @@ const RightEye = styled.div`
 const Mouth = styled.div`
     height: 50px;
     width: 100px;
+    
+    max-height: 150px;
+    max-width: 200px;
+
     overflow: hidden;
 
     display: flex;
