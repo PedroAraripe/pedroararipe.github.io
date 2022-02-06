@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import DudeOnScreen from '../utils/DudeOnScreen';
-import RandomFaces from '../utils/RandomFaces';
 
 export default function Dude (props){
-        DudeOnScreen();
-        RandomFaces()
-        
         return (
             <DudeBody dudeColor={props.dudeColor} className='dude'>
                 <EyesPositionY className='eyes'>

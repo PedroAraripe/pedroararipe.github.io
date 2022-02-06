@@ -1,24 +1,27 @@
 import { useEffect } from 'react';
 
-export default function StaringEyes(){
+const StaringEyes = () => {
 
     useEffect(() => {
         const dudes = document.querySelectorAll('.dude');
 
         dudes.forEach((dude) => {
             const observer = new IntersectionObserver((entry) => {
-                const element = entry[0]
-                if(element.isIntersecting){
+                // const element = entry[0];
+
+                removeClassDirections(dudes);
+                // if(element.isIntersecting){
                     addMouseMovement();
-                } else {
-                    removeMouseMovement();
-                    removeClassDirections(dude);
-                }
+                    
+                    // } else {
+                    // removeMouseMovement();
+
+                // }
             })
 
             observer.observe(dude)
         })
-    }, []);
+    });
 }
 
 function addMouseMovement(){
@@ -56,7 +59,7 @@ function getUserMouseMovement(e){
     return e;
 }
 
-function removeClassDirections(dude){
+function removeClassDirections(dudes){
     const lookingDirectionClasses = [
         'dude-look-left',
         'dude-look-right',
@@ -64,8 +67,10 @@ function removeClassDirections(dude){
         'dude-look-down',
     ]
 
-    lookingDirectionClasses.forEach( c => {
-        dude.classList.remove( c )
+    dudes.forEach(dude => {
+        lookingDirectionClasses.forEach( c => {
+            dude.classList.remove( c )
+        })
     })
 }
 
@@ -92,3 +97,5 @@ function dudeLookUp(dude){
     dude.classList.add('dude-look-up')
     dude.classList.remove('dude-look-down')
 }
+
+export default StaringEyes;
