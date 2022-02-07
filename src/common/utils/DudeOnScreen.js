@@ -9,6 +9,10 @@ const StaringEyes = () => {
             const observer = new IntersectionObserver((entry) => {
                 // const element = entry[0];
 
+                // TODO
+                // Tentar fazer as animações que nem a do site que fiz, usando uma classe callback de animação
+                // que adicionará outra de animação quando o objeto estiver na tela, liberando q ele anime
+
                 removeClassDirections(dudes);
                 // if(element.isIntersecting){
                     addMouseMovement();

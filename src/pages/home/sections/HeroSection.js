@@ -16,7 +16,7 @@ function HeroSection() {
                     </div>
                     <div>
                         <MainTitle className='mb-2'>hi, <span className='text-tomato'> araripe </span> here.</MainTitle>
-                        <h2 className="text-tomato">I create stuff sometimes.</h2>
+                        <h2 className="text-tomato">I build stuff sometimes.</h2>
                     </div>
                     <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                 </section>
