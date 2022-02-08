@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import setRandomFace from './RandomFaces'
 
 const StaringEyes = () => {
 
@@ -7,24 +8,27 @@ const StaringEyes = () => {
 
         dudes.forEach((dude) => {
             const observer = new IntersectionObserver((entry) => {
-                // const element = entry[0];
+                const element = entry[0];
 
                 // TODO
                 // Tentar fazer as animações que nem a do site que fiz, usando uma classe callback de animação
                 // que adicionará outra de animação quando o objeto estiver na tela, liberando q ele anime
 
                 removeClassDirections(dudes);
-                // if(element.isIntersecting){
-                    addMouseMovement();
-                    
-                    // } else {
-                    // removeMouseMovement();
-
-                // }
+                addMouseMovement();
+                if(element.isIntersecting){
+                    dude.classList.add('bouncing');
+                    setRandomFace(dude);
+                } else {
+                    dude.classList.remove('bouncing');
+                }
+                // else {
+                    //     removeMouseMovement();
+                    // }
+                })
+                
+                observer.observe(dude)
             })
-
-            observer.observe(dude)
-        })
     });
 }
 

@@ -1,5 +1,4 @@
 .eyes{
-    position: relative;
     transition: all 0.3s;
 }
 
@@ -9,6 +8,7 @@
 }
 
 .mouth {
+    bottom: 25%;
     transition: all 0.5s;
 }
 
@@ -71,4 +71,48 @@
 
 .straight-face .teeth-down {
     display: none;
+}
+
+.sliding-to-screen.dude .eyes > * {
+    animation: blinking 7s linear infinite;
+    animation-delay: 2s;
+}
+
+.dude.bouncing {
+    animation: bouncing 1s ease-in-out forwards;
+}
+
+@keyframes blinking {
+    0% { 
+        max-height: 2px;
+    }
+    
+    5%,100% {
+        max-height: 30px;
+    }
+}
+
+@keyframes bouncing {
+    0%{
+        transform: translateY(-70px);
+    }
+    
+    50%,100% {
+        transform: translateY(0);
+    }
+    
+    75% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes scale-big {
+    from {
+        transform: scale(1.5);
+    }
+    
+    to {
+        top: 0px;
+        transform: scale(1.0);
+    }
 }

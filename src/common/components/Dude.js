@@ -31,11 +31,23 @@ const DudeBody = styled.div`
 `
 
 const EyesPositionY = styled.div`
-    display: flex;
-    justify-content: space-around;
     position: relative;
+    
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    
+    min-height: 25px;
 
     width: 100%;
+
+    > * {
+        cursor: pointer;
+        
+        &:active {
+            animation: blinking 3s linear forwards;
+        }
+    }
 `
 
 const LeftEye = styled.div`
@@ -73,6 +85,12 @@ const Mouth = styled.div`
     margin-top: 10%;
 
     border-radius: 10% 10% 50% 50%;
+
+    cursor: pointer;
+
+    &:active,&:focus {
+        animation: scale-big 3s linear forwards;
+    }
 `
 
 const AboveTeeth = styled.div`
