@@ -4,13 +4,6 @@ import axios from 'axios';
 import { TitleSection } from '../styles';
 import Project from '../../../common/components/ProjectCard'
 
-const getUserData = async () => {
-    const {data : userInfo} = await axios.get('https://api.github.com/users/PedroAraripe')
-    console.log(userInfo)
-
-    return userInfo;
-};
-
 // function GetUserDataOnMount(){
 
 //     useEffect(() => {
@@ -18,8 +11,7 @@ const getUserData = async () => {
 //     })
 // }
 
-
-
+const themeColor = "hsl(257deg 60% 50%)";
 
 function ProjectsSection() {
     const [list, setList] = useState([]);
@@ -36,14 +28,18 @@ function ProjectsSection() {
     return (
             <section className='mt-5 row'>
                 <div className="col-12 ">
-                    <TitleSection className='mb-4'>Projects</TitleSection>
+                    <TitleSection themeColor={themeColor}>softwares</TitleSection>
                 </div>
                 <div className="col-12">
                     <div className="row">
-                        {list.map(repo => (
-                                <div className="col-md-3">
-                                    <Project projectName={repo.name} key={repo.id} />
-                                </div>
+                        {list.map(project => (
+                            <div className="col-md-4 mb-4" key={project.id}>
+                                <Project
+                                    themeColor={themeColor}
+                                    className="mb-4"
+                                    project={project}
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

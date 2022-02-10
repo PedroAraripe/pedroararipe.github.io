@@ -2,18 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 export default function Dude (props){
-        return (
-            <DudeBody dudeColor={props.dudeColor} className='dude'>
-                <EyesPositionY className='eyes'>
-                    <LeftEye />
-                    <RightEye />
-                </EyesPositionY>
-                <Mouth className='mouth'>
-                    <AboveTeeth className='teeth-up' />
-                    <UnderTeeth className='teeth-down' />
-                </Mouth>
-            </DudeBody>
-        )
+    return (
+        <DudeBody dudeColor={props.dudeColor} className='dude'>
+            <EyesPositionY className='eyes'>
+                <LeftEye />
+                <RightEye />
+            </EyesPositionY>
+            <Mouth className='mouth'>
+                <AboveTeeth className='teeth-up' />
+                <UnderTeeth className='teeth-down' />
+            </Mouth>
+        </DudeBody>
+    )
 }
 
 const DudeBody = styled.div`

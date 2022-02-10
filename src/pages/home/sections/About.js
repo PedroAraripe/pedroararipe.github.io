@@ -4,6 +4,16 @@ import styled from 'styled-components'
 import { TitleSection } from '../styles'; 
 import Dude from '../../../common/components/Dude'
 
+const themeColor = "hsl(144deg 60% 50%)";
+
+const SectionWrapper = styled.section`
+    line-height: 1.5rem;
+
+    & strong {
+        color: ${props => props.themeColor ?? 'white'}
+    }
+`
+
 const TechList = styled.ul`
     list-style: none;
     margin: 0;
@@ -19,16 +29,16 @@ const TechList = styled.ul`
             content: "▹ ";
             position: absolute;
             left: -15px;
-            color: red;
+            color: ${props => props.themeColor ?? 'white'};
         }
     }
 `
 
 function AboutSection() {
     return (
-            <section className='mt-5 row'>
+            <SectionWrapper themeColor={themeColor} className='mt-5 row'>
                 <div className="col-12 ">
-                    <TitleSection className='mb-4'>about</TitleSection>
+                    <TitleSection themeColor={themeColor}>about</TitleSection>
                 </div>
                 <main className="col-md-8">
                     <p>
@@ -44,7 +54,7 @@ function AboutSection() {
                         Here are some technologies I have been working with:
                     </span>
 
-                    <TechList>
+                    <TechList themeColor={themeColor}>
                         <li>Vue.js</li>
                         <li>Nuxt</li>
                         <li>Javascript</li>
@@ -58,9 +68,9 @@ function AboutSection() {
                     </TechList>
                 </main>
                 <aside className="offset-md-1 col-md-3 d-flex justify-content-center justify-content-md-end align-items-md-end">
-                    <Dude dudeColor="hsl(144deg 60% 50%)" />
+                    <Dude dudeColor={themeColor} />
                 </aside>
-            </section>
+            </SectionWrapper>
     );
   }
   
