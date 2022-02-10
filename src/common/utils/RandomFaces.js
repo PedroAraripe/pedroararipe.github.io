@@ -1,7 +1,7 @@
 const facesClassesList = [
     '',
     'little-smile',
-    'straight-face',
+    'surprised',
 ]
 
 function getRandomInt(min, max) {

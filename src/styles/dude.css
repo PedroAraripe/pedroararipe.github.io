@@ -57,19 +57,21 @@
     display: none;
 }
 
-.straight-face .mouth {
-    max-height: 10px;
-    max-width: 60px;;
-    
+.surprised .mouth {
+    border-radius: 50%;
     margin-top: 25%;
-    border-radius: none;
+    max-height: 12px;
+    max-width: 12px;
+    position: relative;
+    bottom: 0.2rem;
+    left: -0.5rem;
 }
 
-.straight-face .teeth-up {
+.surprised .teeth-up {
     display: none;
 }
 
-.straight-face .teeth-down {
+.surprised .teeth-down {
     display: none;
 }
 
