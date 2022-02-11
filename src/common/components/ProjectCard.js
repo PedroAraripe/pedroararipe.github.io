@@ -6,6 +6,15 @@ const WrapperProject = styled.div`
         & .project-hover {
             opacity: 1;
         }
+
+        
+        & .arrow-body {
+            max-width:100px !important;
+        }
+
+        & .fa-chevron-down {
+            opacity: 0 !important;
+        }
     }
 
     position: relative;
@@ -36,6 +45,7 @@ const WrapperProject = styled.div`
     }
 
     & .project-title {
+        text-transform: capitalize;
         font-weight: bold;
         margin: 1rem 0;
         font-size: 1.2rem;
@@ -69,6 +79,8 @@ const ProjectHover = styled.div `
 
     padding: 2rem;
 
+    border-radius: 15px;
+
     &:hover {
         transition: transform 1s;
         transform: scale(1.1);
@@ -88,13 +100,13 @@ const ProjectHover = styled.div `
     background: #f9a2d5;
     color: black;
 
-    h3 {
+    & h3 {
         text-transform: uppercase;
         font-weight: bold;
         word-break: break-word;
     }
 
-    p {
+    & p {
         display: flex;
         align-items:center;
 
@@ -102,44 +114,69 @@ const ProjectHover = styled.div `
     }
 
 
+    & .arrow {
+        display:flex;
+        position: relative;
+        
+        padding: 0.5rem;
+        
+        overflow: hidden;
+
+        & .fa-chevron-down {
+            position: relative;
+            right: 0.6rem;
+
+            transform: rotate(-90deg);
+            transition: all 1.5s;
+            
+        }
+
+        & .arrow-body {
+            height: 100%;
+            width: 100px;
+            max-width:10px;
+
+            transition: all 2s;
+
+            border-top: 2px solid black;
+            margin-top: 0.46rem;
+        }
+    }
+    
+
 `
 
 export default function ProjectCard({className, project, themeColor}){
     console.log(project.topics)
     
+    // here one project isnt going to nowhere on click... no idea why
     return(
         <WrapperProject className={className} themeColor={themeColor}>
             <ProjectHover className="project-hover">
                 <h3>{project.name}</h3>
                 <p>{project.description}</p>
+                <a 
+                    href={project.homepage ?? project.clone_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="arrow"
+                >
+                    <div className="arrow-body" />
+                    <i className="fa-solid fa-chevron-down"></i>
+                </a>
             </ProjectHover>
-            {/* <i className="fa-solid fa-folder"></i> */}
-            {/* <i class="fa-regular fa-folder-open"></i> */}
-            <i class="fa-regular fa-file-code"></i>
+            <i className="fa-regular fa-file-code"></i>
 
             <div className="d-flex flex-column justify-content-between flex-grow-1">
                 <div className='project-title'>
                     {project.name}
                 </div>
-
-                {/* <div className='project-description'>
-                    {project.description}
-                </div> */}
                 {project?.topics.length > 0 && 
                     <div className="project-tags">
-                        *{project.topics.join(', ')}
+                        * {project.topics.join(', ')}
                     </div>
                 }
             </div>
-        {/* <img className='code-icon' src={require('../../images/hello_stranger.jpg')} alt="acessar código" /> */}
-        {/* <a
-            className='h-100 d-block'
-            href={projectUrl}
-            target="_blank"
-            rel="noreferrer"
-        >
-            {projectName}
-        </a> */}
         </WrapperProject>
     )
 }
