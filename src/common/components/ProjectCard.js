@@ -117,6 +117,7 @@ const ProjectHover = styled.div `
     & .arrow {
         display:flex;
         position: relative;
+        min-height: 46px;
         
         padding: 0.5rem;
         
@@ -125,6 +126,8 @@ const ProjectHover = styled.div `
         & .fa-chevron-down {
             position: relative;
             right: 0.6rem;
+            top: -5px;
+            right: 5px;
 
             transform: rotate(-90deg);
             transition: all 1.5s;
