@@ -1,173 +1,167 @@
 .eyes {
-    cursor: pointer;
-    transition: all 0.3s;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 .eyes {
-    animation: blinking-infinite 8s linear infinite;
+  animation: blinking-infinite 8s linear infinite;
 }
 
-.eyes > *:active  {
-    animation: touching-dude-eyes 1s linear;
+.eyes > *:active {
+  animation: touching-dude-eyes 1s linear;
 }
 
 .dude {
-    position: relative;
-    transition: all .5s;
+  position: relative;
+  transition: all 0.3s;
 }
 
 .mouth {
-    transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .dude-look-left {
-    left: -10px !important;
+  left: -10px !important;
 }
 
 .dude-look-left .eyes {
-    left: -10px !important;
+  left: -10px !important;
 }
 
 .dude-look-right {
-    left: 10px !important;
+  left: 10px !important;
 }
 
 .dude-look-right .eyes {
-    left: 10px !important;
+  left: 10px !important;
+}
+
+.dude-look-mouth .eyes {
+  left: 10px !important;
 }
 
 .dude-look-up {
-    top: -5px !important;
+  top: -5px !important;
 }
 
 .dude-look-up .eyes {
-    top: -5px !important;
+  top: -5px !important;
 }
 
 .dude-look-down {
-    top: 15px !important;
+  top: 15px !important;
 }
 
 .dude-look-down .eyes {
-    top: 15px !important;
+  top: 15px !important;
 }
 
 .dude-look-down .mouth {
-    transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .little-smile .mouth {
-    max-height: 10px;
-    max-width: 10px;
+  max-height: 10px;
+  max-width: 10px;
 }
 
 .little-smile .teeth-up {
-    display: none;
+  display: none;
 }
 
 .little-smile .teeth-down {
-    display: none;
+  display: none;
 }
 
 .surprised .mouth {
-    border-radius: 50%;
-    margin-top: 25%;
-    max-height: 12px;
-    max-width: 12px;
-    position: relative;
-    bottom: 0.2rem;
-    left: -0.5rem;
+  border-radius: 50%;
+  margin-top: 25%;
+  max-height: 12px;
+  max-width: 12px;
+  position: relative;
+  bottom: 0.2rem;
+  left: -0.5rem;
 }
 
 .surprised .teeth-up {
-    display: none;
+  display: none;
 }
 
 .surprised .teeth-down {
-    display: none;
+  display: none;
 }
 
 .dude.bouncing {
-    animation: bouncing 1s ease-in-out forwards;
+  animation: bouncing 1s ease-in-out forwards;
 }
 
 .anxious-boy {
-    animation: anxious-boy 4s ease-in-out infinite;
+  animation: anxious-boy 10s linear infinite;
 }
 
 @keyframes anxious-boy {
-    0% { 
-        top: 0px;
-        transform: translateX(0);
-    }
-    
-    25% {
-        transform: translateX(-25vw);
-        top: -20px;
-    }
-    
-    50% {
-        top: 0px;
-        transform: translateX(0);
-    }
-    
-    75% {
-        top: -20px;
-        transform: translateX(25vw);
-    }
-    
-    100% {
-        top: 0px;
-        transform: translateX(0);
-    }
-/* 
-    100% {
-        transform: translateX(0);
-    } */
+  15%,
+  25%,
+  35%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
 }
 
 @keyframes touching-dude-eyes {
-    0% { 
-        max-height: 2px;
-    }
-    
-    100% {
-        max-height: 30px;
-    }
+  0% {
+    max-height: 2px;
+  }
+
+  100% {
+    max-height: 30px;
+  }
 }
 
 @keyframes blinking-infinite {
-    
-    0%,30%,80% {
-        max-height: 3px;
-    }
-    
-    15%, 50%, 100% {
-        max-height: 300px;
-    }
+  0%,
+  30%,
+  80% {
+    max-height: 3px;
+  }
+
+  15%,
+  50%,
+  100% {
+    max-height: 300px;
+  }
 }
 
 @keyframes bouncing {
-    0%{
-        transform: translateY(-70px);
-    }
-    
-    50%,100% {
-        transform: translateY(0);
-    }
-    
-    75% {
-        transform: translateY(-20px);
-    }
+  0% {
+    transform: translateY(-70px);
+  }
+
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes scale-big {
-    from {
-        transform: scale(1.5);
-    }
-    
-    to {
-        top: 0px;
-        transform: scale(1.0);
-    }
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    top: 0px;
+    transform: scale(1);
+  }
 }

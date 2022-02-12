@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import styled from 'styled-components'
 import { TitleSection } from '../styles'; 
 import Dude from '../../../common/components/Dude'
-
-const themeColor = "hsl(144deg 60% 50%)";
+import themesColors from '../../../common/themesColors';
 
 const SectionWrapper = styled.section`
     line-height: 1.5rem;
@@ -35,6 +34,8 @@ const TechList = styled.ul`
 `
 
 function AboutSection() {
+    let [themeColor, setThemeColor] = useState([themesColors[1]]);
+
     return (
             <SectionWrapper themeColor={themeColor} className='mt-5 row'>
                 <div className="col-12 ">
@@ -68,7 +69,7 @@ function AboutSection() {
                     </TechList>
                 </main>
                 <aside className="offset-md-1 col-md-3 d-flex justify-content-center justify-content-md-end align-items-md-end">
-                    <Dude themeColor={themeColor} />
+                    <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
                 </aside>
             </SectionWrapper>
     );

@@ -1,13 +1,28 @@
 import styled from 'styled-components';
 
+import getRandomOnArray from '../utils/getRandomOnArray';
+import themeColors from '../themesColors';
+
 // const themeColor = "blue";
 // TODO
 // quando clicar no dude ele faz tipo um surpresa com a boca e muda o tema da sessão
 // ver como que passa um dado de um filho para o pai no react
 
 export default function Dude (props){
+    function generateNewTheme(){
+        const newValue= getRandomOnArray(themeColors);
+        
+        if( props.themeColor === newValue ) generateNewTheme();
+        
+        else {
+            return props.setThemeColor(newValue);
+        }
+    }
+    
+
+
     return (
-        <DudeBody themeColor={props.themeColor} className='dude'>
+        <DudeBody onClick={generateNewTheme}  themeColor={props.themeColor} className='dude'>
             <EyesPositionY className='eyes'>
                 <LeftEye />
                 <RightEye />
@@ -21,6 +36,7 @@ export default function Dude (props){
 }
 
 const DudeBody = styled.div`
+    cursor: pointer;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -32,6 +48,32 @@ const DudeBody = styled.div`
     height: 150px;
     
     border-radius: 25px 10px;
+
+    :hover,:active, :focus {
+        position: relative;
+        left: 0 !important;
+        top: 0 !important;
+
+        transition: all 1s;
+        -webkit-transition-delay:all .5 ease;
+        -moz-transition-delay:all .5 ease;
+        -ms-transition-delay:all .5 ease;
+        -o-transition-delay:all .5 ease;
+        
+
+        > * {
+            position: relative;
+            left: 0 !important;
+            top: 0 !important;
+            
+            transition: all .5 ease;
+            -webkit-transition-delay:all .5 ease;
+            -moz-transition-delay:all .5 ease;
+            -ms-transition-delay:all .5 ease;
+            -o-transition-delay:all .5 ease;
+        }
+        
+    }
 `
 
 const EyesPositionY = styled.div`
@@ -84,7 +126,7 @@ const Mouth = styled.div`
 
     cursor: pointer;
 
-    &:active,&:focus {
+    &:active {
         animation: scale-big 3s linear forwards;
     }
 `

@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import setRandomFace from './RandomFaces'
+import setRandomFace from './RandomFaces';
 
 const StaringEyes = () => {
 
@@ -11,7 +11,7 @@ const StaringEyes = () => {
         if(isUserOnMobile) {
             dudes.forEach(dude => {
                 setRandomFace(dude);
-                dude.classList.add('anxious-boy')
+                dude.classList.add('anxious-boy');
             })
         } else {
             dudes.forEach((dude) => {
@@ -38,8 +38,7 @@ const StaringEyes = () => {
             })
 
         }
-
-    });
+    },[]);
 }
 
 function addMouseMovement(){

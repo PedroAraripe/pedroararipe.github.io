@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Dude from '../../../common/components/Dude';
 
-const themeColor = "hsl(0 60% 50%)";
+import Dude from '../../../common/components/Dude';
+import themesColors from '../../../common/themesColors';
 
 function HeroSection() {
+    let [themeColor, setThemeColor] = useState([themesColors[0]]);
     return (
         <Wrapper>
             <div className="h-100 d-flex flex-column align-items-center align-items-md-start justify-content-center">
@@ -14,7 +15,7 @@ function HeroSection() {
                     {/* Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado  */}
                     {/* De tempos em tempos é adicionado um novo bonequinho que vem deslizando 
                     para o lado do ultimo bonequinho */}
-                        <Dude themeColor={themeColor} />
+                        <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
                     </div>
                     <div>
                         <MainTitle className='mb-2'>hi, <SpanTheme themeColor={themeColor}> araripe </SpanTheme> here.</MainTitle>
@@ -26,7 +27,7 @@ function HeroSection() {
                     <AnchorTheme
                         themeColor={themeColor}
                         href="mailto:pedro.lucx@gmail.com"
-                        className="btn btn-tomato text-tomato px-5 py-3">
+                        className="btn px-5 py-3">
                             Say hello
                     </AnchorTheme>
                 </div>
@@ -47,8 +48,17 @@ const SecondaryTitleTheme = styled.h2`
     color: ${props => props.themeColor?? 'red'};
 `
 
-const AnchorTheme = styled.h2`
+const AnchorTheme = styled.a`
+    font-weight: bold;
+
+    border: 1px solid ${props => props.themeColor?? 'red'};
     color: ${props => props.themeColor?? 'red'};
+
+    :hover {
+        transition: all 0.4s;
+        color: black;
+        background-color: ${props => props.themeColor?? 'red'};
+    }
 `
 
 const MainTitle = styled.h1`

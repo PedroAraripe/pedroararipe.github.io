@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import { TitleSection } from '../styles';
-import Project from '../../../common/components/ProjectCard'
-
-const themeColor = "hsl(257deg 60% 50%)";
+import Project from '../../../common/components/ProjectCard';
+import themesColors from '../../../common/themesColors';
 
 function ProjectsSection() {
+    let [themeColor] = useState([themesColors[2]]);
+    
     const [list, setList] = useState([]);
     // const user = GetUserDataOnMount();
     useEffect(() => {

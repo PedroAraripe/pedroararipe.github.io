@@ -59,3 +59,15 @@ body {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+section span,
+section strong,
+section h1,
+section h2,
+section li{
+  transition: all 1s ease;
+  -webkit-transition-delay: all 1s ease;
+  -moz-transition-delay: all 1s ease;
+  -ms-transition-delay: all 1s ease;
+  -o-transition-delay: all 1s ease;
+}
