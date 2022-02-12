@@ -91,6 +91,41 @@
     animation: bouncing 1s ease-in-out forwards;
 }
 
+.anxious-boy {
+    animation: anxious-boy 4s ease-in-out infinite;
+}
+
+@keyframes anxious-boy {
+    0% { 
+        top: 0px;
+        transform: translateX(0);
+    }
+    
+    25% {
+        transform: translateX(-25vw);
+        top: -20px;
+    }
+    
+    50% {
+        top: 0px;
+        transform: translateX(0);
+    }
+    
+    75% {
+        top: -20px;
+        transform: translateX(25vw);
+    }
+    
+    100% {
+        top: 0px;
+        transform: translateX(0);
+    }
+/* 
+    100% {
+        transform: translateX(0);
+    } */
+}
+
 @keyframes touching-dude-eyes {
     0% { 
         max-height: 2px;

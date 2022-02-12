@@ -1,9 +1,13 @@
-import React from 'react';
 import styled from 'styled-components';
+
+// const themeColor = "blue";
+// TODO
+// quando clicar no dude ele faz tipo um surpresa com a boca e muda o tema da sessão
+// ver como que passa um dado de um filho para o pai no react
 
 export default function Dude (props){
     return (
-        <DudeBody dudeColor={props.dudeColor} className='dude'>
+        <DudeBody themeColor={props.themeColor} className='dude'>
             <EyesPositionY className='eyes'>
                 <LeftEye />
                 <RightEye />
@@ -22,7 +26,7 @@ const DudeBody = styled.div`
     flex-direction: column;
     justify-content: center;
     
-    background-color: ${props => ( props.dudeColor ?? '#cc3333')};;
+    background-color: ${props => ( props.themeColor ?? '#cc3333')};;
 
     width: 150px;
     height: 150px;

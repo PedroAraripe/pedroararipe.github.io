@@ -8,31 +8,37 @@ const StaringEyes = () => {
         const dudes = document.querySelectorAll('.dude');
         const isUserOnMobile = !!(window.screen.width < 768);
 
-        if(isUserOnMobile) return 
-
-        dudes.forEach((dude) => {
-            const observer = new IntersectionObserver((entry) => {
-                const element = entry[0];
-
-                // TODO
-                // Tentar fazer as animações que nem a do site que fiz, usando uma classe callback de animação
-                // que adicionará outra de animação quando o objeto estiver na tela, liberando q ele anime
-
-                removeClassDirections(dudes);
-                addMouseMovement();
-                if(element.isIntersecting){
-                    dude.classList.add('bouncing');
-                    setRandomFace(dude);
-                } else {
-                    dude.classList.remove('bouncing');
-                }
-                // else {
-                    //     removeMouseMovement();
-                    // }
+        if(isUserOnMobile) {
+            dudes.forEach(dude => {
+                setRandomFace(dude);
+                dude.classList.add('anxious-boy')
+            })
+        } else {
+            dudes.forEach((dude) => {
+                const observer = new IntersectionObserver((entry) => {
+                    const element = entry[0];
+                    // TODO
+                    // Tentar fazer as animações que nem a do site que fiz, usando uma classe callback de animação
+                    // que adicionará outra de animação quando o objeto estiver na tela, liberando q ele anime
+    
+                    removeClassDirections(dudes);
+                    addMouseMovement();
+                    if(element.isIntersecting){
+                        dude.classList.add('bouncing');
+                        setRandomFace(dude);
+                    } else {
+                        dude.classList.remove('bouncing');
+                    }
+                    // else {
+                        //     removeMouseMovement();
+                        // }
                 })
-                
+
                 observer.observe(dude)
             })
+
+        }
+
     });
 }
 

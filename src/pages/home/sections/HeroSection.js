@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Dude from '../../../common/components/Dude';
 
+const themeColor = "hsl(0 60% 50%)";
+
 function HeroSection() {
     return (
         <Wrapper>
@@ -12,20 +14,21 @@ function HeroSection() {
                     {/* Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado  */}
                     {/* De tempos em tempos é adicionado um novo bonequinho que vem deslizando 
                     para o lado do ultimo bonequinho */}
-                        <Dude />
+                        <Dude themeColor={themeColor} />
                     </div>
                     <div>
-                        <MainTitle className='mb-2'>hi, <span className='text-tomato'> araripe </span> here.</MainTitle>
-                        <h2 className="text-tomato">I build stuff sometimes.</h2>
+                        <MainTitle className='mb-2'>hi, <SpanTheme themeColor={themeColor}> araripe </SpanTheme> here.</MainTitle>
+                        <SecondaryTitleTheme themeColor={themeColor}>I build stuff sometimes.</SecondaryTitleTheme>
                     </div>
                     <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                 </section>
                 <div>
-                    <a
+                    <AnchorTheme
+                        themeColor={themeColor}
                         href="mailto:pedro.lucx@gmail.com"
                         className="btn btn-tomato text-tomato px-5 py-3">
                             Say hello
-                    </a>
+                    </AnchorTheme>
                 </div>
             </div>
         </Wrapper>
@@ -34,6 +37,18 @@ function HeroSection() {
 
 const Wrapper = styled.div`
     height: 100vh;
+`
+
+const SpanTheme = styled.span`
+    color: ${props => props.themeColor?? 'red'};
+`
+
+const SecondaryTitleTheme = styled.h2`
+    color: ${props => props.themeColor?? 'red'};
+`
+
+const AnchorTheme = styled.h2`
+    color: ${props => props.themeColor?? 'red'};
 `
 
 const MainTitle = styled.h1`

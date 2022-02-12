@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// TODO
+// talvez fazer com que 
+
 const WrapperProject = styled.div`
     &:hover {
         & .project-hover {

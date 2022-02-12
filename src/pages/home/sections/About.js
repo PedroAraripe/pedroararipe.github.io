@@ -68,7 +68,7 @@ function AboutSection() {
                     </TechList>
                 </main>
                 <aside className="offset-md-1 col-md-3 d-flex justify-content-center justify-content-md-end align-items-md-end">
-                    <Dude dudeColor={themeColor} />
+                    <Dude themeColor={themeColor} />
                 </aside>
             </SectionWrapper>
     );
