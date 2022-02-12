@@ -40,14 +40,6 @@ const EyesPositionY = styled.div`
     min-height: 25px;
 
     width: 100%;
-
-    > * {
-        cursor: pointer;
-        
-        &:active {
-            animation: blinking 3s linear forwards;
-        }
-    }
 `
 
 const LeftEye = styled.div`

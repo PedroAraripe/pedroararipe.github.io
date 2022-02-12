@@ -3,8 +3,12 @@ import setRandomFace from './RandomFaces'
 
 const StaringEyes = () => {
 
+    
     useEffect(() => {
         const dudes = document.querySelectorAll('.dude');
+        const isUserOnMobile = !!(window.screen.width < 768);
+
+        if(isUserOnMobile) return 
 
         dudes.forEach((dude) => {
             const observer = new IntersectionObserver((entry) => {

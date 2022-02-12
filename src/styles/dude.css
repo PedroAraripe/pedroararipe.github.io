@@ -1,14 +1,22 @@
-.eyes{
+.eyes {
+    cursor: pointer;
     transition: all 0.3s;
 }
 
-.dude{
+.eyes {
+    animation: blinking-infinite 8s linear infinite;
+}
+
+.eyes > *:active  {
+    animation: touching-dude-eyes 1s linear;
+}
+
+.dude {
     position: relative;
-    transition: all 0.3s;
+    transition: all .5s;
 }
 
 .mouth {
-    bottom: 25%;
     transition: all 0.5s;
 }
 
@@ -37,11 +45,15 @@
 }
 
 .dude-look-down {
-    top: 5px !important;
+    top: 15px !important;
 }
 
 .dude-look-down .eyes {
-    top: 5px !important;
+    top: 15px !important;
+}
+
+.dude-look-down .mouth {
+    transform: translateY(10px);
 }
 
 .little-smile .mouth {
@@ -75,22 +87,28 @@
     display: none;
 }
 
-.sliding-to-screen.dude .eyes > * {
-    animation: blinking 7s linear infinite;
-    animation-delay: 2s;
-}
-
 .dude.bouncing {
     animation: bouncing 1s ease-in-out forwards;
 }
 
-@keyframes blinking {
+@keyframes touching-dude-eyes {
     0% { 
         max-height: 2px;
     }
     
-    5%,100% {
+    100% {
         max-height: 30px;
+    }
+}
+
+@keyframes blinking-infinite {
+    
+    0%,30%,80% {
+        max-height: 3px;
+    }
+    
+    15%, 50%, 100% {
+        max-height: 300px;
     }
 }
 

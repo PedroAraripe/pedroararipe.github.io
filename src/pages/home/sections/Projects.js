@@ -4,13 +4,6 @@ import axios from 'axios';
 import { TitleSection } from '../styles';
 import Project from '../../../common/components/ProjectCard'
 
-// function GetUserDataOnMount(){
-
-//     useEffect(() => {
-//         setList(getUserData());
-//     })
-// }
-
 const themeColor = "hsl(257deg 60% 50%)";
 
 function ProjectsSection() {
