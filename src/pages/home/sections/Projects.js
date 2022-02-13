@@ -25,17 +25,16 @@ function ProjectsSection() {
                     <TitleSection themeColor={themeColor}>softwares</TitleSection>
                 </div>
                 <div className="col-12">
-                    <div className="row">
+                    <ul className="row">
                         {list.map(project => (
-                            <div className="col-md-4 mb-4" key={project.id}>
+                            <li className="col-md-4 p-3" key={project.id}>
                                 <Project
                                     themeColor={themeColor}
-                                    className="mb-4"
                                     project={project}
                                 />
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </section>
     );

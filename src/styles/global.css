@@ -13,6 +13,10 @@ html,body {
   color: #d63384;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   margin: 0;
     
