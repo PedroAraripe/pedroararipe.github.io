@@ -9,28 +9,34 @@ function HeroSection() {
     return (
         <Wrapper>
             <div className="h-100 d-flex flex-column align-items-center align-items-md-start justify-content-center">
-                <section className="d-flex flex-column align-items-center d-md-block text-center text-md-start">
-                    <div className="pb-4">
-                    {/* TODO */}
-                    {/* Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado  */}
-                    {/* De tempos em tempos é adicionado um novo bonequinho que vem deslizando 
-                    para o lado do ultimo bonequinho */}
-                        <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
+                <section className="d-fle w-100 flex-column align-items-center d-md-block text-center text-md-start">
+                <div className="row flex-column-reverse flex-md-row">
+                    <div className="col-md-9">
+                        {/* <div className="pb-4"> */}
+                        {/* TODO */}
+                        {/* Colocar aqui um bonequinho que fica olhando e piscando quadrado avermelhado  */}
+                        {/* De tempos em tempos é adicionado um novo bonequinho que vem deslizando 
+                        para o lado do ultimo bonequinho */}
+                        {/* </div> */}
+                        <div>
+                            <MainTitle className='mb-2'>hi, <SpanTheme themeColor={themeColor}> araripe </SpanTheme> here.</MainTitle>
+                            <SecondaryTitleTheme themeColor={themeColor}>I build stuff sometimes.</SecondaryTitleTheme>
+                        </div>
+                        <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
+                            <AnchorTheme
+                                themeColor={themeColor}
+                                href="mailto:pedro.lucx@gmail.com"
+                                className="btn px-5 py-3">
+                                    Say hello
+                            </AnchorTheme>
                     </div>
-                    <div>
-                        <MainTitle className='mb-2'>hi, <SpanTheme themeColor={themeColor}> araripe </SpanTheme> here.</MainTitle>
-                        <SecondaryTitleTheme themeColor={themeColor}>I build stuff sometimes.</SecondaryTitleTheme>
+                    <div className="col-md-3 d-flex align-items-center justify-content-center">
+                        <div className="mb-5 mb-md-0">
+                            <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
+                        </div>
                     </div>
-                    <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
-                </section>
-                <div>
-                    <AnchorTheme
-                        themeColor={themeColor}
-                        href="mailto:pedro.lucx@gmail.com"
-                        className="btn px-5 py-3">
-                            Say hello
-                    </AnchorTheme>
                 </div>
+                </section>
             </div>
         </Wrapper>
     );
