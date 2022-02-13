@@ -23,6 +23,7 @@ const TechList = styled.ul`
     
     > * {
         position: relative;
+        padding-left: 4px;
         
         :before {
             content: "▹ ";

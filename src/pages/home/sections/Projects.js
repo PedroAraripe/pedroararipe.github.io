@@ -6,7 +6,7 @@ import Project from '../../../common/components/ProjectCard';
 import themesColors from '../../../common/themesColors';
 
 function ProjectsSection() {
-    let [themeColor] = useState([themesColors[2]]);
+    let [themeColor] = useState([themesColors[3]]);
     
     const [list, setList] = useState([]);
     // const user = GetUserDataOnMount();
@@ -20,12 +20,12 @@ function ProjectsSection() {
     },[])
 
     return (
-            <section className='mt-5 row'>
+            <section className='pb-5 row'>
                 <div className="col-12 ">
                     <TitleSection themeColor={themeColor}>softwares</TitleSection>
                 </div>
                 <div className="col-12">
-                    <ul className="row">
+                    <ul className="row p-0">
                         {list.map(project => (
                             <li className="col-md-4 p-3" key={project.id}>
                                 <Project

@@ -81,7 +81,7 @@ export default function ProjectCard({className, project, themeColor}){
             
             <a 
                 className='project-title'
-                href={project.homepage ?? project.clone_url}
+                href={project.homepage?.length ? project.homepage : project.html_url}
                 target="_blank"
                 rel="noreferrer"
             >
