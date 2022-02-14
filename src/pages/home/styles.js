@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const TitleSection = styled.h1`
     margin-bottom: 2rem;
+    cursor: pointer;
     
     @media (min-width: 768px) {
         margin-bottom: 3rem;

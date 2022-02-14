@@ -3,10 +3,11 @@ import axios from 'axios';
 
 import { TitleSection } from '../styles';
 import Project from '../../../common/components/ProjectCard';
-import themesColors from '../../../common/themesColors';
+import themesColors from '../../../common/constants/themesColors';
+import getRandomOnArray from '../../../common/utils/getRandomOnArray';
 
 function ProjectsSection() {
-    let [themeColor] = useState([themesColors[3]]);
+    let [themeColor, setThemeColor] = useState([themesColors[3]]);
     
     const [list, setList] = useState([]);
     // const user = GetUserDataOnMount();
@@ -22,7 +23,7 @@ function ProjectsSection() {
     return (
             <section className='pb-md-5 row'>
                 <div className="col-12 ">
-                    <TitleSection themeColor={themeColor}>softwares</TitleSection>
+                    <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>softwares</TitleSection>
                 </div>
                 <div className="col-12">
                     <ul className="row p-0">

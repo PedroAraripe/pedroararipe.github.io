@@ -1,7 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import getRandomOnArray from '../utils/getRandomOnArray';
-import themeColors from '../themesColors';
+import themeColors from '../constants/themesColors';
+import facesClassesList from '../constants/facesClassList';
 
 // const themeColor = "blue";
 // TODO
@@ -9,6 +11,8 @@ import themeColors from '../themesColors';
 // ver como que passa um dado de um filho para o pai no react
 
 export default function Dude (props){
+    let dudeFace = getRandomOnArray(facesClassesList);
+
     function generateNewTheme(){
         const newValue= getRandomOnArray(themeColors);
         
@@ -18,11 +22,25 @@ export default function Dude (props){
             return props.setThemeColor(newValue);
         }
     }
+
+    function generateNewFace(){
+        const newValue = getRandomOnArray(facesClassesList);
+        
+        if( dudeFace == newValue ) {
+            generateNewFace();
+        } else {
+            dudeFace = newValue;
+        }
+    }
+
+    function clickHandler() {
+        generateNewFace();
+        generateNewTheme();
+    }
     
 
-
     return (
-        <DudeBody onClick={generateNewTheme}  themeColor={props.themeColor} className='dude'>
+        <DudeBody onClick={clickHandler}  themeColor={props.themeColor} className={`dude ${props.className} ${dudeFace}`}>
             <EyesPositionY className='eyes'>
                 <LeftEye />
                 <RightEye />

@@ -96,7 +96,7 @@
 }
 
 .anxious-boy {
-  animation: anxious-boy 10s linear infinite;
+  animation: anxious-boy 5s linear infinite;
 }
 
 @keyframes anxious-boy {

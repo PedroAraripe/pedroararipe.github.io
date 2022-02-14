@@ -1,10 +1,6 @@
-import getRandomOnArray from './getRandomOnArray'
+import facesClassesList from '../constants/facesClassList';
+import getRandomOnArray from './getRandomOnArray';
 
-const facesClassesList = [
-    '',
-    'little-smile',
-    'surprised',
-]
 
 const facesClassesListNoDefault = facesClassesList.filter((c) => c)
 

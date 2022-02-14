@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 import styled from "styled-components";
 import { TitleSection } from "../styles";
-import themesColors from "../../../common/themesColors";
+import themesColors from "../../../common/constants/themesColors";
+import getRandomOnArray from "../../../common/utils/getRandomOnArray";
+import Dude from "../../../common/components/Dude";
 
 const TabItem = styled.li`
   width: auto;
@@ -102,48 +104,53 @@ function ExperienceSection() {
   return (
     <section className="row py-5">
       <div className="col-12 ">
-        <TitleSection themeColor={themeColor}>experience</TitleSection>
+        <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>experience</TitleSection>
       </div>
-      <div className="row py-3 my-md-5">
-        <ul className="d-flex d-md-block col-md-2">
-          {experiences.map((experience) => (
-            <TabItem
-              themeColor={themeColor}
-              key={experience.id}
-              isCurrentTab={experience.id == currentTab.id}
-              onClick={() => setCurrentTab(experience)}
-            >
-              {experience.company.name}
-            </TabItem>
-          ))}
-        </ul>
-        <div className="col-md-9">
-          <CurrentTab className="">
-            <div className="tab-title d-flex">
-              <div className="job-title">
-                {currentTab.title}
-              </div>
-              &nbsp;
-              <CompanyTheme
+      <div className="col-md-8">
+        <div className="row py-3 my-md-5">
+          <ul className="d-flex d-md-block col-md-2">
+            {experiences.map((experience) => (
+              <TabItem
                 themeColor={themeColor}
-                className="d-flex align-items-center"
+                key={experience.id}
+                isCurrentTab={experience.id == currentTab.id}
+                onClick={() => setCurrentTab(experience)}
               >
-                @
-                <a href={currentTab.company.url} target="_blank" rel="noreferrer">
-                  {currentTab.company.name}
-                </a>
-              </CompanyTheme>
-            </div>
-            <div className="tab-phase">
-              {currentTab.phase}
-            </div>
-            <ListDescriptions themeColor={themeColor}>
-              {currentTab?.descriptions?.map((description, i) => (
-                <li key={i}>{description}</li>
-              ))}
-            </ListDescriptions>
-          </CurrentTab>
+                {experience.company.name}
+              </TabItem>
+            ))}
+          </ul>
+          <div className="col-md-9">
+            <CurrentTab className="">
+              <div className="tab-title d-flex">
+                <div className="job-title">
+                  {currentTab.title}
+                </div>
+                &nbsp;
+                <CompanyTheme
+                  themeColor={themeColor}
+                  className="d-flex align-items-center"
+                >
+                  @
+                  <a href={currentTab.company.url} target="_blank" rel="noreferrer">
+                    {currentTab.company.name}
+                  </a>
+                </CompanyTheme>
+              </div>
+              <div className="tab-phase">
+                {currentTab.phase}
+              </div>
+              <ListDescriptions themeColor={themeColor}>
+                {currentTab?.descriptions?.map((description, i) => (
+                  <li key={i}>{description}</li>
+                ))}
+              </ListDescriptions>
+            </CurrentTab>
+          </div>
         </div>
+      </div>
+      <div className="offset-md-1 col-md-3 d-flex justify-content-center align-items-center">
+        <Dude className="anxious-boy" themeColor={themeColor} setThemeColor={setThemeColor} />
       </div>
     </section>
   );

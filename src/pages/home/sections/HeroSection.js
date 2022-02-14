@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Dude from '../../../common/components/Dude';
-import themesColors from '../../../common/themesColors';
+import themesColors from '../../../common/constants/themesColors';
 
 function HeroSection() {
     let [themeColor, setThemeColor] = useState([themesColors[0]]);
@@ -32,7 +32,7 @@ function HeroSection() {
                     </div>
                     <div className="col-md-3 d-flex align-items-center justify-content-center">
                         <div className="mb-5 mb-md-0">
-                            <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
+                            <Dude className="anxious-boy" themeColor={themeColor} setThemeColor={setThemeColor} />
                         </div>
                     </div>
                 </div>

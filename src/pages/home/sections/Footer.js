@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 const WrapperFooter = styled.footer`
     font-size: .7rem;
+    color: #b7b2b2;
 `
 
 function FooterSection() {

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-import styled from 'styled-components'
 import { TitleSection } from '../styles'; 
-import Dude from '../../../common/components/Dude'
-import themesColors from '../../../common/themesColors';
+import themesColors from '../../../common/constants/themesColors';
+import getRandomOnArray from '../../../common/utils/getRandomOnArray';
 
 const SectionWrapper = styled.section`
     line-height: 1.5rem;
@@ -40,7 +40,7 @@ function AboutSection() {
     return (
             <SectionWrapper themeColor={themeColor} className='mt-5 row'>
                 <div className="col-12 ">
-                    <TitleSection themeColor={themeColor}>about</TitleSection>
+                    <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>about</TitleSection>
                 </div>
                 <main className="col-md-8">
                     <p>
@@ -69,9 +69,6 @@ function AboutSection() {
                         <li>PostCss</li>
                     </TechList>
                 </main>
-                <aside className="offset-md-1 col-md-3 d-flex justify-content-center justify-content-md-end align-items-md-end">
-                    <Dude themeColor={themeColor} setThemeColor={setThemeColor} />
-                </aside>
             </SectionWrapper>
     );
   }
