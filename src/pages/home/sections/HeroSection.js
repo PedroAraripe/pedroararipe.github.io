@@ -25,7 +25,7 @@ function HeroSection() {
                         <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                             <AnchorTheme
                                 themeColor={themeColor}
-                                href="mailto:pedro.lucx@gmail.com"
+                                href="https://api.whatsapp.com/send?phone=5585997791248&text=Hi!%20nice%20portfolio,%20keep%20going!"
                                 className="btn px-5 py-3">
                                     Say hello
                             </AnchorTheme>
