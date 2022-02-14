@@ -19,13 +19,15 @@ const WrapperProject = styled.div`
     box-shadow: 0 0 5px ${props => props.themeColor ?? 'blue'};
     border-radius: 15px;
 
-    :hover {
-        transition: all 0.3s;
-        transform: translateY(-1rem);
-
-        .project-title{
+    @media (min-width: 768px) {
+        :hover {
             transition: all 0.3s;
-            color: ${props => props.themeColor ?? 'blue'};
+            transform: translateY(-1rem);
+
+            .project-title{
+                transition: all 0.3s;
+                color: ${props => props.themeColor ?? 'blue'};
+            }
         }
     }
     

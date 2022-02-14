@@ -7,11 +7,6 @@ html,body {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* cor de texto fofa rosa vermleho #d63384; */
-
-.text-pinkish {
-  color: #d63384;
-}
 
 li {
   list-style: none;
@@ -45,23 +40,10 @@ body {
   height: 120px;
 }
 
-.loader-cwise {
-  animation: spin-left 2s linear infinite;
-  
-}
 
-.loader-acwise {
-  animation: spin-right 2s linear infinite;  
-}
 
-@keyframes spin-left {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(-360deg); }
-}
-
-@keyframes spin-right {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.gear {
+  animation: gear 5s linear infinite;
 }
 
 section span,
@@ -74,4 +56,14 @@ section li{
   -moz-transition-delay: all 1s ease;
   -ms-transition-delay: all 1s ease;
   -o-transition-delay: all 1s ease;
+}
+
+@keyframes gear {
+  0% {
+    transform:rotate(360deg);
+  }
+  
+  66% {
+    transform:rotate(0);
+  }
 }

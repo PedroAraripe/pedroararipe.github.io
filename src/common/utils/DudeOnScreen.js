@@ -8,12 +8,7 @@ const StaringEyes = () => {
         const dudes = document.querySelectorAll('.dude');
         const isUserOnMobile = !!(window.screen.width < 768);
 
-        if(isUserOnMobile) {
-            dudes.forEach(dude => {
-                setRandomFace(dude);
-                dude.classList.add('anxious-boy');
-            })
-        } else {
+        if(!isUserOnMobile) {
             dudes.forEach((dude) => {
                 const observer = new IntersectionObserver((entry) => {
                     const element = entry[0];
@@ -33,10 +28,8 @@ const StaringEyes = () => {
                         //     removeMouseMovement();
                         // }
                 })
-
                 observer.observe(dude)
             })
-
         }
     },[]);
 }
