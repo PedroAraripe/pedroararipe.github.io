@@ -18,6 +18,7 @@ const WrapperProject = styled.div`
     border: 1px solid ${props => props.themeColor ?? 'blue'};
     box-shadow: 0 0 5px ${props => props.themeColor ?? 'blue'};
     border-radius: 15px;
+    transition: all .5s;
 
     @media (min-width: 768px) {
         :hover {

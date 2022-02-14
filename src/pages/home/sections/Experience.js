@@ -79,7 +79,7 @@ function ExperienceSection() {
       title: "Front-End Junior",
       phase: "Feb 2022 - Present",
       descriptions: [
-        "Creating landing pages with js, html, javascript for a diverse array of client",
+        "Creating landing pages with js, html, javascript for a diverse array of clients",
         "Focus on performance and perfect detailed pages",
       ],
     },
@@ -92,7 +92,7 @@ function ExperienceSection() {
       title: "Front-End Intern",
       phase: "Mar 2021 - Feb 2022",
       descriptions: [
-        "Write clean, modern and maintainable code for a educational plataform",
+        "Write clean, modern and maintainable code for a educational platform",
         "Focus on development of features with Vue.js",
       ],
     },
