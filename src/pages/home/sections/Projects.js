@@ -23,7 +23,7 @@ function ProjectsSection() {
     return (
             <section className='pb-md-5 row'>
                 <div className="col-12 ">
-                    <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>softwares</TitleSection>
+                    <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>projects</TitleSection>
                 </div>
                 <div className="col-12">
                     <ul className="row p-0">
