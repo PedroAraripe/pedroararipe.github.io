@@ -26,6 +26,8 @@ function HeroSection() {
                             <AnchorTheme
                                 themeColor={themeColor}
                                 href="https://api.whatsapp.com/send?phone=5585997791248&text=Hi!%20nice%20portfolio,%20keep%20going!"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="btn px-5 py-3">
                                     Say hello
                             </AnchorTheme>
