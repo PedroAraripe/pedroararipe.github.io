@@ -20,7 +20,7 @@ function ProjectsSection() {
     },[])
 
     return (
-            <section className='pb-5 row'>
+            <section className='pb-md-5 row'>
                 <div className="col-12 ">
                     <TitleSection themeColor={themeColor}>softwares</TitleSection>
                 </div>

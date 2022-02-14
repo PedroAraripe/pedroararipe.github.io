@@ -4,6 +4,7 @@ import HeroSection from './sections/HeroSection';
 import About from './sections/About';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
+import FooterSection from './sections/Footer';
 
 import DudeOnScreen from '../../common/utils/DudeOnScreen'
 
@@ -17,6 +18,7 @@ function Home(){
             <About />
             <Experience />
             <Projects />
+            <FooterSection />
         </>
     )
 }
