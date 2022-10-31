@@ -17,7 +17,7 @@ function HeroSection() {
                             <MainTitle className='mb-2'>hi, <SpanTheme themeColor={themeColor}> araripe </SpanTheme> here.</MainTitle>
                             <SecondaryTitleTheme themeColor={themeColor}>I build stuff sometimes.</SecondaryTitleTheme>
                         </div>
-                        <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a front-end developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
+                        <HeroTextContainer className="pt-4 pb-4 pb-md-5">I'm a Fullstack Developer based in Brazil and i love learning everything that helps me express my creativity.</HeroTextContainer>
                     </div>
                     <div className="col-md-3 d-flex align-items-center justify-content-center justify-content-lg-end">
                         <div className="mb-5 mb-md-0">
