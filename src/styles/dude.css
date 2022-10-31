@@ -142,7 +142,7 @@
 
 @keyframes bouncing {
   0% {
-    transform: translateY(-70px);
+    transform: translateY(-100px);
   }
 
   50%,

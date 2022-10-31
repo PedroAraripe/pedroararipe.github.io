@@ -7,20 +7,24 @@ import getRandomOnArray from "../../../common/utils/getRandomOnArray";
 import Dude from "../../../common/components/Dude";
 
 const TabItem = styled.li`
-  width: auto;
-  
+  width: ${(props) => `${1/props.totalItems*100}%`};
   padding: 0.5rem 0.8rem;
-
   font-size: 14px;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   cursor: pointer;
 
   color: ${(props) => (props.isCurrentTab ? props.themeColor : "white")};
   border-top: 2px solid ${(props) => (props.isCurrentTab ? props.themeColor : "#444")};
 
   @media (min-width: 768px) {
+    width: auto;
     border-top: none;
+    justify-content: start;
     border-left: 2px solid ${(props) => (props.isCurrentTab ? props.themeColor : "#444")};
+    height: ${(props) => `${1/props.totalItems*100}%`};
   }
 `;
 
@@ -80,7 +84,7 @@ function ExperienceSection() {
       title: "Software Engineer",
       phase: "May 2022 - Present",
       descriptions: [
-        "Developing features and doing maintenance for a automation platform in the agricultural sector",
+        "Developing tech solutions for the agricultural sector",
         "Handling large amounts of data with Node and Mariadb",
         "Tech: Node.js · MariaDB · MySQL · JavaScript · Vue.js",
       ],
@@ -125,11 +129,12 @@ function ExperienceSection() {
       </div>
       <div className="col-md-8">
         <div className="row py-3 row py-3 mb-2 mb-md-4">
-          <ul className="d-flex d-md-block col-md-2">
+          <ul className="d-flex flex-md-column col-md-2">
             {experiences.map((experience) => (
               <TabItem
                 themeColor={themeColor}
                 key={experience.id}
+                totalItems={experiences.length}
                 isCurrentTab={experience.id == currentTab.id}
                 onClick={() => setCurrentTab(experience)}
               >
@@ -143,13 +148,13 @@ function ExperienceSection() {
                 <div className="job-title">
                   {currentTab.title}
                 </div>
-                &nbsp;
                 <CompanyTheme
                   themeColor={themeColor}
                   className="d-flex align-items-center"
                 >
-                  @
-                  <a href={currentTab.company.url} target="_blank" rel="noreferrer">
+                &nbsp;@
+                &nbsp;
+                  <a  href={currentTab.company.url} target="_blank" rel="noreferrer">
                     {currentTab.company.name}
                   </a>
                 </CompanyTheme>
