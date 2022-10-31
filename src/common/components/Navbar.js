@@ -29,6 +29,7 @@ export default function Navbar() {
         'top': 0,
         'left': 0,
         'zIndex': 9999999,
+        'opacity': 0.8,
         'backgroundColor': themeColor
       }}
     >
