@@ -70,35 +70,52 @@ const CurrentTab = styled.div`
 
 function ExperienceSection() {
   const experiences = [
+    
     {
-      id: 0,
+      id: 2,
       company: {
-        name: "NRE",
-        url: "https://www.linkedin.com/company/nre-tecnologia/mycompany/",
+        name: "3v3",
+        url: "https://www.3v3.com.br/",
       },
-      title: "Front-End Junior",
-      phase: "Feb 2022 - Present",
+      title: "Software Engineer",
+      phase: "May 2022 - Present",
       descriptions: [
-        "Creating landing pages with js, html, javascript for a diverse array of clients",
-        "Focus on performance and perfect detailed pages",
+        "Developing features and doing maintenance for a automation platform in the agricultural sector",
+        "Handling large amounts of data with Node and Mariadb",
+        "Tech: Node.js · MariaDB · MySQL · JavaScript · Vue.js",
       ],
     },
     {
       id: 1,
       company: {
+        name: "NRE",
+        url: "https://www.linkedin.com/company/nre-tecnologia/mycompany/",
+      },
+      title: "Front-End Developer",
+      phase: "Feb 2022 - May 2022",
+      descriptions: [
+        "Creating landing pages with js, html, javascript for a diverse array of clients",
+        "Focus on performance and perfect detailed pages",
+        "Tech: Gulp.js · Bootstrap · JavaScript · CSS · HTML · Vue.js",
+      ],
+    },
+    {
+      id: 0,
+      company: {
         name: "PC4",
         url: "https://www.linkedin.com/company/pc4combr/?originalSubdomain=br",
       },
-      title: "Front-End Intern",
+      title: "Front-End",
       phase: "Mar 2021 - Feb 2022",
       descriptions: [
         "Write clean, modern and maintainable code for a educational platform",
         "Focus on development of features with Vue.js",
+        "Tech: Vuetify · JavaScript · CSS · HTML · Vue.js",
       ],
     },
   ];
 
-  let [themeColor, setThemeColor] = useState([themesColors[2]]);
+  let [themeColor, setThemeColor] = useState([themesColors[1]]);
   let [currentTab, setCurrentTab] = useState(experiences[0]);
 
   return (
@@ -107,7 +124,7 @@ function ExperienceSection() {
         <TitleSection themeColor={themeColor} onClick={() => setThemeColor(getRandomOnArray(themesColors))}>experience</TitleSection>
       </div>
       <div className="col-md-8">
-        <div className="row py-3 my-md-5">
+        <div className="row py-3 row py-3 mb-2 mb-md-4">
           <ul className="d-flex d-md-block col-md-2">
             {experiences.map((experience) => (
               <TabItem
@@ -149,7 +166,7 @@ function ExperienceSection() {
           </div>
         </div>
       </div>
-      <div className="offset-md-1 col-md-3 d-flex justify-content-center align-items-center">
+      <div className="mb-5 mb-lg-0 offset-md-1 col-md-3 d-flex justify-content-center justify-content-lg-end align-items-center">
         <Dude className="anxious-boy" themeColor={themeColor} setThemeColor={setThemeColor} />
       </div>
     </section>

@@ -5,11 +5,8 @@ import styled from 'styled-components'
 import Home from './pages/home/index.js'
 
 const WrapperContainerX = styled.div`
-  padding: 0 20px;
-
-  @media (min-width: 768px){
-    padding: 0 15%;
-  }
+  max-width: 100vw;
+  overflow: clip;
 `
 
 function App() {

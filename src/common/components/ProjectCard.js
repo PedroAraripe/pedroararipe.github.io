@@ -1,9 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// TODO
-// talvez fazer com que 
-
 const WrapperProject = styled.div`
     position: relative;
 
@@ -68,16 +65,10 @@ const WrapperProject = styled.div`
         color: #a6a6a6;
         font-size: 0.7rem;
     }
-
-    ${'' /* & .project-tags {
-        align-items: end;
-        display: flex;
-    } */}
 ` 
 
 export default function ProjectCard({className, project, themeColor}){
     
-    // here one project isnt going to nowhere on click... no idea why
     return(
         <WrapperProject className={className} themeColor={themeColor}>
             <i className="fa-regular fa-file-code"></i>

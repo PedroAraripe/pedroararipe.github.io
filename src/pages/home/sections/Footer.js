@@ -10,7 +10,7 @@ const WrapperFooter = styled.footer`
 function FooterSection() {
 
     return (
-            <WrapperFooter className='p-5 d-flex align-items-center justify-content-center text-center'>
+            <WrapperFooter className='p-5 d-flex align-items-center justify-content-center justify-content-lg-end text-center text-capitalize'>
                 Designed & Built by Lucas Araripe
             </WrapperFooter>
     );

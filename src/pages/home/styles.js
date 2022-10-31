@@ -40,7 +40,7 @@ export const TitleSection = (props) => {
   return (
     <Title onClick={props.onClick} themeColor={props.themeColor} className="mb-4 d-flex align-items-center">
       <h1>{props.children}</h1>
-      <i className="fa-solid fa-gear gear mt-1 mt-md-2"></i>
+      {/* <i className="fa-solid fa-gear gear mt-1 mt-md-2"></i> */}
     </Title>
   );
 };

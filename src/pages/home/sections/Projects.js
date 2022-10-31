@@ -7,10 +7,9 @@ import themesColors from '../../../common/constants/themesColors';
 import getRandomOnArray from '../../../common/utils/getRandomOnArray';
 
 function ProjectsSection() {
-    let [themeColor, setThemeColor] = useState([themesColors[3]]);
+    let [themeColor, setThemeColor] = useState([themesColors[1]]);
     
     const [list, setList] = useState([]);
-    // const user = GetUserDataOnMount();
     useEffect(() => {
         let mounted = true;
         if(mounted) {

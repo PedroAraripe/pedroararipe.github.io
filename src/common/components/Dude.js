@@ -5,11 +5,6 @@ import getRandomOnArray from '../utils/getRandomOnArray';
 import themeColors from '../constants/themesColors';
 import facesClassesList from '../constants/facesClassList';
 
-// const themeColor = "blue";
-// TODO
-// quando clicar no dude ele faz tipo um surpresa com a boca e muda o tema da sessão
-// ver como que passa um dado de um filho para o pai no react
-
 export default function Dude (props){
     let dudeFace = getRandomOnArray(facesClassesList);
 

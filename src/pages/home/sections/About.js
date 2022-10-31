@@ -36,6 +36,18 @@ const TechList = styled.ul`
 
 function AboutSection() {
     let [themeColor, setThemeColor] = useState([themesColors[1]]);
+    const techs = [
+        'Javascript',
+        'Node',
+        'Vue.js',
+        'React.js',
+        'SQL',
+        'Typescript',
+        'Express',
+        'Nuxt',
+        'Next',
+        'Shell',
+    ]
 
     return (
             <SectionWrapper themeColor={themeColor} className='mt-5 row'>
@@ -57,16 +69,7 @@ function AboutSection() {
                     </span>
 
                     <TechList themeColor={themeColor}>
-                        <li>Vue.js</li>
-                        <li>Nuxt</li>
-                        <li>Javascript</li>
-                        <li>React.js</li>
-                        <li>Next</li>
-                        <li>Node.js</li>
-                        <li>Bootstrap</li>
-                        <li>TailwindCss</li>
-                        <li>Sass</li>
-                        <li>PostCss</li>
+                        {techs.map((tech, index) => <li key={index}>{tech}</li>)}
                     </TechList>
                 </main>
             </SectionWrapper>
