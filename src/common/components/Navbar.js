@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className='col-12'>
         <ul className="container py-2 mb-0 p-0 d-flex justify-content-between align-items-center">
           <li>
-            <a href="/#" style={{color: 'white'}}>
+            <a href="https://pedroararipe.github.io/portfolio/#" style={{color: 'white'}}>
               <i className="fa-solid fa-house mt-1 mt-md-2" style={{fontSize: '1.5rem'}}></i>
             </a>
           </li>
