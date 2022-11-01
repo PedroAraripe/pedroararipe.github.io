@@ -109,7 +109,7 @@ function ExperienceSection() {
         name: "PC4",
         url: "https://www.linkedin.com/company/pc4combr/?originalSubdomain=br",
       },
-      title: "Front-End",
+      title: "Front-End Developer",
       phase: "Mar 2021 - Feb 2022",
       descriptions: [
         "Write clean, modern and maintainable code for a educational platform",
